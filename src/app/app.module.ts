@@ -23,6 +23,8 @@ import { MusicService } from './services/music.service';
 import { Artists, ARTISTS } from './constants/artists';
 import { ALBUMS, Albums } from './constants/albums';
 import { SONGS, Songs } from './constants/songs';
+import { AboutComponent } from './components/about/about.component';
+import { RelatedArtistsComponent } from './components/related-artists/related-artists.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { SONGS, Songs } from './constants/songs';
     PlayerComponent,
     ModalPlaylistComponent,
     PopupPlaylistComponent,
-    PopupAddPlaylistComponent
+    PopupAddPlaylistComponent,
+    AboutComponent,
+    RelatedArtistsComponent
   ],
   imports: [
     BrowserModule,

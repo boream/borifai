@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainAlbumListComponent } from './components/main-album-list/main-album-list.component';
+import { AboutComponent } from './components/about/about.component';
+import { RelatedArtistsComponent } from './components/related-artists/related-artists.component';
 
 
 const routes: Routes = [
@@ -15,11 +17,11 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: MainAlbumListComponent
+    component: AboutComponent
   },
   {
     path: 'related-artists',
-    component: MainAlbumListComponent
+    component: RelatedArtistsComponent
   }
 ];
 
