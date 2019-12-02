@@ -17,7 +17,7 @@
 
   &:hover::after{
       position: absolute;
-      content: url(/assets/svg/Add.svg);
+      content: url('/assets/svg/Add.svg');
       width: rem(14px);
       height: rem(14px);
       top: 0;

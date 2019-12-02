@@ -3,5 +3,6 @@ export interface Album {
   name: string;
   image: string;
   artistId: number;
+  artist?: string;
   year: number;
 }

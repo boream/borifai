@@ -1,5 +1,5 @@
 <article class="artist">
-  <button type="button" class="artist__btn">Save to My Stars</button>
+  <button type="button" (click)="changeArtist()" class="artist__btn">Save to My Stars</button>
   <h3 class="artist__name">Artist</h3>
   <div class="tab__menu">
     <button type="button" routerLink='/albums' routerLinkActive="tab__menu-item-activated"
@@ -11,5 +11,3 @@
   </div>
   <router-outlet></router-outlet>
 </article>
-
-<button (click)="changeArtist()">Cambiar</button>

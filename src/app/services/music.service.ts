@@ -14,11 +14,11 @@ import { Artist } from '../types/artist';
 export class MusicService {
 
   public selectedSong$ = new BehaviorSubject<Song>({
-    id: 7,
-    name: 'Aura',
-    albumId: 3,
-    artistId: 2,
-    path: '../../../assets/music/warhola/Aura.mp3',
+    id: 1,
+    name: 'Dont stop me now',
+    albumId: 1,
+    artistId: 1,
+    path: '/assets/music/queen/dont-stop-me-now.mp3',
   });
 
   public selectedAlbum$ = new BehaviorSubject<Album>({
@@ -26,6 +26,7 @@ export class MusicService {
     name: 'Greatest Hits',
     image: '/assets/images/cover_Queen_01.jpg',
     artistId: 1,
+    artist: 'Queen',
     year: 1975
   });
 
@@ -42,9 +43,6 @@ export class MusicService {
     @Inject(ALBUMS) private albums: Album[],
     @Inject(SONGS) private songs: Song[]
   ) {
-    this.selectedSong$.next(this.songs[1]);
-
-    this.selectedAlbum$.next(this.albums[0]);
 
     this.selectedArtist$ = this.selectedSong$.pipe(
       map(song => this.artists.find(artist => artist.id === song.artistId))
@@ -86,7 +84,12 @@ export class MusicService {
   }
 
   selectAlbum(album: Album) {
-    this.selectedAlbum$.next(album);
+    const selected = Object.assign({}, album);
+    if (!album.artist) {
+      const artist = this.artists.find(a => a.id === album.artistId);
+      selected.artist = artist.name;
+    }
+    this.selectedAlbum$.next(selected);
   }
 
 }
