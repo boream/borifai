@@ -1,0 +1,26 @@
+@import "../../../styles/partials/rem";
+
+:host {
+  background-color: transparent;
+  display: flex;
+  padding: rem(17px 30px);
+  align-items: center;
+}
+.header-search {
+  flex: 1 0 auto;
+  input {
+    background-color: transparent;
+    border: none;
+    margin-left: 1rem;
+    outline: none;
+    width: calc(100% - (14px + 2rem));
+  }
+}
+.header-user {
+  &__name {
+    margin-right: rem(10px);
+  }
+  display: flex;
+  align-items: center;
+}
+

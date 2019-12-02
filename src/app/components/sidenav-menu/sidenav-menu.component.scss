@@ -1,0 +1,23 @@
+@import "../../../styles/partials/rem";
+@import "../../../styles/partials/variables";
+.navbar {
+  display: flex;
+  flex-direction: column;
+  margin: rem(30px 35px);
+  &__item {
+    // font-size: rem(14px);
+    // color: $sidebar-text;
+    &+& {
+      margin-top: rem(14px);
+    }
+    &:nth-of-type(5) {
+      margin-top: rem(42px) !important;
+    }
+  }
+  &__heading {
+    margin-bottom: rem(22px);
+    // font-size: rem(13px);
+    // font-weight: 700;
+    // color: $white;
+  }
+}

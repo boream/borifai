@@ -1,0 +1,15 @@
+:host {
+  // background-color: burlywood;
+  // background-image: url('/assets/images/wallpaper_Warhola.jpg');
+  flex: 1 0 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.main {
+  height: 100%;
+  background-size: cover;
+}
+.main-container {
+  height: 100%;
+  display: flex;
+}

@@ -1,0 +1,8 @@
+<audio [src]="song.path" #innerAudio></audio>
+<div class="list__item" (click)="playBtnHandler()">
+  <div class="item__data">
+    <p class="item__data--song">{{song.name}}</p>
+    <p class="item__data--album">{{song.album}}</p>
+  </div>
+  <p class="item__time">{{time}}</p>
+</div>

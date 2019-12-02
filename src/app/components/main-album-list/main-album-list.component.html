@@ -1,0 +1,4 @@
+<app-main-album 
+  *ngFor="let album of musicService.artistAlbums$ | async" 
+  [album]="album"
+  (changeAlbum)="selectAlbum($event)"></app-main-album>

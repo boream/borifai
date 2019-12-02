@@ -1,0 +1,5 @@
+<div class="album">
+    <img (click)="changeAlbum.emit(album)" class="album__img" alt="Imagen album" [src]="album.image">
+    <p class="album__name">{{album.name}}</p>
+    <p class="album__year">{{album.year}}</p>
+</div>

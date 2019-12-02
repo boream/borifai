@@ -1,0 +1,29 @@
+@import "../../../styles/partials/rem";
+@import "../../../styles/partials/variables";
+
+.playlist {
+  margin: rem(51px 35px);
+  &__item {
+    button {
+      margin-top: rem(14px);
+      padding-left: 0;
+    }
+    button::before {
+      content: "●";
+      margin-right: rem(10px);
+      color: $playlist-bullet;
+    }
+    &--selected {
+      button::before {
+        color: $playlist-bullet-active;
+      }
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    .h2 {
+      align-self: center;
+    }
+  }
+}

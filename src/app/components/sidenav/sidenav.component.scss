@@ -1,0 +1,7 @@
+@import "../../../styles/partials/rem";
+@import "../../../styles/partials/variables";
+
+:host {
+  flex-basis: rem(220px);
+  background-image: linear-gradient($navbar1, $navbar2);
+}
